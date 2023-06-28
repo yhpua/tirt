@@ -139,4 +139,4 @@ tirt(qol_dat, B = 100, rform = "sum")
     Jun;32(6):1819-1830. doi: 10.1007/s11136-023-03355-8. Epub 2023 Feb
     13.
 
-[^2]: Should have specified more (e.g., $1000$) samples
+[^2]: Should have specified more (e.g., 1000) samples
