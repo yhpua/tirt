@@ -1,0 +1,16 @@
+Package: tirt
+Type: Package
+Title: Intepretational thresholds based on IRT method  
+Version: 0.1.0
+Author: Yong-Hao Pua & Berend Terluin 
+Maintainer: Yong-Hao Pua <gmspuyh@nus.edu.sg>
+Description: Estimate interpretational threshold based on item response theory (IRT) method developed by Berend Terluin
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    mirt
+Depends: 
+    R (>= 2.10)
+RoxygenNote: 7.2.3
