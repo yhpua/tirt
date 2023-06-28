@@ -6,7 +6,7 @@ Interpretational Threshold based on IRT method
 
 This $R$ package contains the `tirt` function to estimate
 interpretational threshold values (with bootstrapped 95% CIs) of a
-multi-item questionnaire using the item response theory (IRT) method
+multi-item questionnaire based on the item response theory (IRT) method
 developed by [Terluin et
 al[^1]](https://pubmed.ncbi.nlm.nih.gov/36780033/). The package is
 developed to accompany the paper, “Using item response theory to
@@ -17,7 +17,7 @@ functionality.
 
 ## Installation
 
-Install the development version from
+Please install the development version of the `tirt` package from
 [GitHub](https://github.com/yhpua/tirt) with:
 
 ``` r
@@ -27,13 +27,14 @@ devtools::install_github("yhpua/tirt")
 
 ## Example 1
 
-Using `tirt` to estimate FI interpretational threshold. A built-in toy
-dataset `fi_dat` is used in the example code below. The dataset
-comprises all (binary and polytomous) items of the Frailty Index, and
-the last column represents a binary anchor item.
+We will use `tirt` to estimate the interpretational threshold value of
+the Frailty Index (FI). The built-in (toy) dataset, `fi_dat`, includes
+all (binary and polytomous) items of the FI and a (binary) clinical
+anchor item that is placed in the last column.
 
-Setting the `B = 100` argument specifies 100[^2] bootstrap resamples
-when computing 95%CIs for the IRT-based thresholds.
+Note that setting the `B = 100` argument specifies 100[^2] bootstrap
+resamples to be used when computing the 95%CIs for the IRT-based
+thresholds.
 
 ``` r
 library(mirt)
@@ -113,14 +114,15 @@ tirt(fi_dat, B = 100)
 
 ## Example 2
 
-The built-in `qol_dat` dataset uses the simulated dataset provided in
-the supplementary materials of the paper by [Terluin et
-al](https://pubmed.ncbi.nlm.nih.gov/36780033/).
+We will use `tirt` to estimate the IRT-based threshold value of a
+multi-item questionnaire. The built-in `qol_dat` dataset is the
+simulated dataset described in Appendix Section 4 of the paper by
+[Terluin et al](https://pubmed.ncbi.nlm.nih.gov/36780033/).
 
-Setting the `rform` argument to `sum` returns the expected (mean)
-questionnaire score. In Example 1, `rform` is set to `prop` (default)
-which expresses the expected score as a proportion of the number of
-items evaluated.
+Note that setting the `rform` argument to `sum` returns the expected
+(mean) questionnaire score. In Example 1, we set `rform` to `prop`
+(default) which expresses the expected score as a proportion of the
+number of items evaluated.
 
 ``` r
 data(qol_dat)

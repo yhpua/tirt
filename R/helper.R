@@ -39,6 +39,7 @@ expected.test_mod <- function (x, Theta, which.items, mydata){
 #' checks whether items have 2 or more response options
 #' important to perform checks on low-prevalence items during the bootstrapping process
 #'
+#'
 #' @title item response option checks
 #' @param mydata
 #' @param n_unique

@@ -4,6 +4,7 @@
 #'
 #' @title Threshold based on IRT method (tirt)
 #'
+#'
 #' @param mydata a dataframe containing all items of a multi-item questionnaire (or Frailty Index) and a binary anchor item
 #' @param B   number of bootstrap resamples to do to get confidence intervals for IRT-based thresholds
 #' @param rform computes expected summed score (`sum`) or express summed score as a proportion of number of items (`prop` default)
