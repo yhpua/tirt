@@ -11,17 +11,16 @@ developed by [Terluin et
 al[^1]](https://pubmed.ncbi.nlm.nih.gov/36780033/). The package is
 developed to accompany the paper, “Using item response theory to
 estimate interpretation threshold values for the Frailty Index (FI) in
-community dwelling middle-aged and older adults.” Two example datasets
-are included in the package to help users better understand its
-functionality.
+community dwelling older adults.” Two example datasets are included in
+the `tirt` package to help users better understand its functionality.
 
 ## Installation
 
-Please install the development version of the `tirt` package from
+Please install the `tirt` package from
 [GitHub](https://github.com/yhpua/tirt) with:
 
 ``` r
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("yhpua/tirt")
 ```
 
@@ -138,7 +137,6 @@ tirt(qol_dat, B = 100, rform = "sum")
 
 [^1]: Terluin et al Estimating meaningful thresholds for multi-item
     questionnaires using item response theory Qual Life Res. 2023
-    Jun;32(6):1819-1830. doi: 10.1007/s11136-023-03355-8. Epub 2023 Feb
-    13.
+    Jun;32(6):1819-1830. doi: 10.1007/s11136-023-03355-8.
 
 [^2]: Should have specified more (e.g., 1000) samples

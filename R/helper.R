@@ -1,6 +1,6 @@
 
 
-#' used within `tirt()` to computeexpected score
+#' used within `tirt()` to compute the expected score
 #' modified from mirt::expected.test() to account for different category values
 #'
 #' @title modified expected.test()
