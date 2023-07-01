@@ -1,6 +1,6 @@
 tirt
 ================
-Interpretational Threshold based on IRT method
+Interpretational threshold values based on the IRT method
 
 # Introduction
 
@@ -27,9 +27,9 @@ devtools::install_github("yhpua/tirt")
 ## Example 1
 
 We will use `tirt` to estimate the interpretational threshold value of
-the Frailty Index (FI). The built-in (toy) dataset, `fi_dat`, includes
-all (binary and polytomous) items of the FI and a (binary) clinical
-anchor item that is placed in the last column.
+the Frailty Index (FI). The built-in synthetic dataset, `fi_dat`,
+includes all (binary and polytomous) items of the FI and a (binary)
+clinical anchor item that is placed in the last column.
 
 Note that setting the `B = 100` argument specifies 100[^2] bootstrap
 resamples to be used when computing the 95%CIs for the IRT-based
