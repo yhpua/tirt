@@ -14,8 +14,9 @@
 #'
 #' @examples
 #'\dontrun{
-#' dat <- data("fidf_example")
-#' tirt(dat)
+#' library(tirt)
+#' data(fi_dat)
+#' tirt(fi_dat, B = 1000)  ## threshold value with 95% bootstrapped CI
 #' }
 
 
