@@ -1,18 +1,17 @@
 tirt
 ================
-Interpretational threshold values based on the IRT method
+interpretation threshold values based on the IRT method
 
 # Introduction
 
-This $R$ package contains the `tirt` function to estimate
-interpretational threshold values (with bootstrapped 95% CIs) of a
-multi-item questionnaire based on the item response theory (IRT) method
-developed by [Terluin et
-al[^1]](https://pubmed.ncbi.nlm.nih.gov/36780033/). The package is
-developed to accompany the paper, “Using item response theory to
-estimate interpretation threshold values for the Frailty Index (FI) in
-community dwelling older adults.” Two example datasets are included in
-the `tirt` package to help users better understand its functionality.
+This $R$ package contains the `tirt` function to estimate interpretation
+threshold values (with bootstrapped 95% CIs) of a multi-item
+questionnaire based on the item response theory (IRT) method developed
+by [Terluin et al[^1]](https://pubmed.ncbi.nlm.nih.gov/36780033/). The
+package is developed to accompany the paper, “Using item response theory
+to estimate interpretation threshold values for the Frailty Index (FI)
+in community dwelling older adults.” Two example datasets are included
+in the `tirt` package to help users better understand its functionality.
 
 ## Installation
 
@@ -26,10 +25,10 @@ devtools::install_github("yhpua/tirt")
 
 ## Example 1
 
-We will use `tirt` to estimate the interpretational threshold value of
-the Frailty Index (FI). The built-in synthetic dataset, `fi_dat`,
-includes all (binary and polytomous) items of the FI and a (binary)
-clinical anchor item that is placed in the last column.
+We will use `tirt` to estimate the interpretation threshold of the
+Frailty Index (FI). The built-in synthetic dataset, `fi_dat`, includes
+all (binary and polytomous) items of the FI and a (binary) clinical
+anchor item that is placed in the last column.
 
 Note that setting the `B = 100` argument specifies 100[^2] bootstrap
 resamples to be used when computing the 95%CIs for the IRT-based
@@ -113,10 +112,10 @@ tirt(fi_dat, B = 100)
 
 ## Example 2
 
-We will use `tirt` to estimate the IRT-based threshold value of a
-multi-item questionnaire. The built-in `qol_dat` dataset is the
-simulated dataset described in Appendix Section 4 of the paper by
-[Terluin et al](https://pubmed.ncbi.nlm.nih.gov/36780033/).
+We will use `tirt` to estimate the IRT-based threshold of a multi-item
+questionnaire. The built-in `qol_dat` dataset is the simulated dataset
+described in Appendix Section 4 of the paper by [Terluin et
+al](https://pubmed.ncbi.nlm.nih.gov/36780033/).
 
 Note that setting the `rform` argument to `sum` returns the expected
 (mean) questionnaire score. In Example 1, we set `rform` to `prop`
