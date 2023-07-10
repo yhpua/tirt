@@ -7,7 +7,7 @@
 #'
 #' @param mydata a dataframe containing all items of a multi-item questionnaire (or Frailty Index) and a binary anchor item (last column)
 #' @param B   number of bootstrap resamples to do to get confidence intervals for IRT-based thresholds
-#' @param clvar   a character vector specifying names of items that are highly similar (or collinear with) the anchor item
+#' @param clvar   a character vector specifying names of items that are highly similar to (or collinear with) the anchor item
 #' @param rform computes expected summed score (`sum`) or express summed score as a proportion of number of items (`prop` default)
 #'
 #' @return a list of results comprising the expected scores (expressed as a proportion or sum) and bootstrapped CIs if B > 0
