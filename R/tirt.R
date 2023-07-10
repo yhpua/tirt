@@ -30,7 +30,7 @@ tirt <- function (mydata, B = 0, clvar = NULL, rform = c("prop", "sum")){
 
   rform <- match.arg(rform)
 
-  #' Ensure dataset has no missing values
+  #' ensure dataset has no missing values
   if (anyNA(mydata)) {
     warning("NA responses in mydata")
     mydata <- mydata[complete.cases(mydata), ]  ## remove NAs (if any)
@@ -99,7 +99,7 @@ tirt <- function (mydata, B = 0, clvar = NULL, rform = c("prop", "sum")){
   thr.thet <- as.matrix( cf[nitems+1, 2] )
 
 
-  # Step 2.5: with collinear vars, fit an IRT model for all test items (without anchor)
+  # Step 2.5: with collinear vars, re-fit an IRT model on all test items (excluding anchor)
   if(!is.null(clvar)) {
     # refit IRT model
     mod <- suppressMessages(
@@ -111,7 +111,7 @@ tirt <- function (mydata, B = 0, clvar = NULL, rform = c("prop", "sum")){
   }
 
 
-  # Step 3: expected total score
+  # Step 3: compute expected total score
   if(all_integer){
     ret <- expected.test_mod (x = mod, Theta = thr.thet, which.items = 1:nitems, mydata)
   } else {
@@ -169,7 +169,7 @@ tirt <- function (mydata, B = 0, clvar = NULL, rform = c("prop", "sum")){
       b_cf <- coef(bmod, simplify=TRUE, IRTpars=TRUE)$items
       b_thr.thet <- as.matrix( b_cf[nitems+1, 2] )
 
-      # Step 2.5: with collinear vars, fit an IRT model for all test items (without anchor)
+      # Step 2.5: with collinear vars, re-fit an IRT model on all test items (excluding anchor)
       if(!is.null(clvar)) {
         # refit IRT model on all test items (excluding anchor)
         bmod <- suppressMessages(
