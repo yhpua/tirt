@@ -110,6 +110,63 @@ tirt(fi_dat, B = 100)
     ##           Lower Upper
     ## threshold 0.224 0.413
 
+Suppose the `ffi_walk` item is highly similar or collinear with the
+anchor condition. By specifying `clvar = "ffi_walk"`, `tirt` will remove
+this item in the initial estimation phase. Once `tirt` has estimated the
+FI threshold in terms of the latent trait level, it will re-fit an IRT
+model on all FI items (and excluding the anchor item), and use these IRT
+parameters to find the expected FI score that corresponds to the latent
+threshold.
+
+``` r
+tirt(fi_dat, clvar = "ffi_walk", B = 100)  
+```
+
+    ## Warning in tirt(fi_dat, clvar = "ffi_walk", B = 100): ffi_sts has non-integer
+    ## values
+
+    ## Warning in tirt(fi_dat, clvar = "ffi_walk", B = 100): ffi_medication has
+    ## non-integer values
+
+    ## Warning in tirt(fi_dat, clvar = "ffi_walk", B = 100): ffi_bmi has non-integer
+    ## values
+
+    ## Warning in tirt(fi_dat, clvar = "ffi_walk", B = 100): ffi_finance has
+    ## non-integer values
+
+    ## Warning in tirt(fi_dat, clvar = "ffi_walk", B = 100): ffi_walk has non-integer
+    ## values
+
+    ## Warning in tirt(fi_dat, clvar = "ffi_walk", B = 100): dataset includes
+    ## non-integer values
+
+    ## Warning in yhcheck(mydat, 1): ffi_heart_mi has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_medication has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_heart_chf has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_bladder has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_medication has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_heart_mi has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_medication has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_heart_mi has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_medication has <= 1 unique value(s)
+
+    ## Warning in yhcheck(mydat, 1): ffi_heart_mi has <= 1 unique value(s)
+
+    ## $irt
+    ## [1] 0.2609688
+    ## 
+    ## $boot
+    ##           Lower Upper
+    ## threshold 0.212  0.49
+
 ## Example 2
 
 We will use `tirt` to estimate the IRT-based threshold of a multi-item

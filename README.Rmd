@@ -42,6 +42,16 @@ tirt(fi_dat, B = 100)
 ```
 
 
+Suppose the `ffi_walk` item is highly similar or collinear with the anchor condition. By specifying `clvar = "ffi_walk"`, `tirt` will remove this item in the initial estimation phase. Once `tirt` has estimated the FI threshold in terms of the latent trait level, it will re-fit an IRT model on all FI items (and excluding the anchor item), and use these IRT parameters to find the expected FI score that corresponds to the latent threshold.   
+
+```{r collinear, cache = TRUE}
+tirt(fi_dat, clvar = "ffi_walk", B = 100)  
+```
+
+
+
+
+
 ## Example 2
 We will use `tirt` to estimate the IRT-based threshold of a multi-item questionnaire. The built-in `qol_dat` dataset is the simulated dataset described in Appendix Section 4 of the paper by [Terluin et al](https://pubmed.ncbi.nlm.nih.gov/36780033/).    
 
